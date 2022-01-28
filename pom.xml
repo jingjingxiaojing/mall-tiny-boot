@@ -22,12 +22,27 @@
     </properties>
     <dependencies>
 
-        <!--SpringBoot起步依赖v-->
+        <!--SpringBoot起步依赖  v-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <!--排除tomcat依赖  v-->
+                <exclusion>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
+                <!--排除tomcat依赖 ^-->
+            </exclusions>
         </dependency>
-        <!--SpringBoot起步依赖^-->
+        <!--SpringBoot起步依赖 ^-->
+
+        <!--undertow容器  v-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+        <!--undertow容器 ^-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -53,6 +68,39 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+
+        <!--MyBatis分页插件 v-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.10</version>
+        </dependency>
+        <!--MyBatis分页插件 ^-->
+
+        <!--集成druid连接池  v-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+        <!--集成druid连接池  ^-->
+
+        <!--Mysql数据库驱动  v-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.15</version>
+        </dependency>
+        <!--Mysql数据库驱动  ^-->
+
+        <!--springfox swagger官方Starter  v-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <!--springfox swagger官方Starter  ^-->
+
     </dependencies>
 
     <build>
