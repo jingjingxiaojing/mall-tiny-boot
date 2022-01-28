@@ -1,1 +1,3 @@
 # SpringBootÅäÖÃÎÄ¼ş
+server:
+  port: 8088
